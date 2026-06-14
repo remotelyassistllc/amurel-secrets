@@ -1,0 +1,123 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "short_description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Oud & Amber",
+        "African Botanicals",
+        "Western Luxury",
+        "Niche & Artisan"
+      ]
+    },
+    "gender": {
+      "type": "string",
+      "enum": [
+        "Women",
+        "Men",
+        "Unisex"
+      ]
+    },
+    "fragrance_family": {
+      "type": "string",
+      "enum": [
+        "Floral",
+        "Woody",
+        "Oriental",
+        "Fresh",
+        "Oud",
+        "Amber",
+        "Spicy",
+        "Aquatic",
+        "Chypre",
+        "Fougere"
+      ]
+    },
+    "top_notes": {
+      "type": "string"
+    },
+    "heart_notes": {
+      "type": "string"
+    },
+    "base_notes": {
+      "type": "string"
+    },
+    "intensity": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "longevity": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "sillage": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "price_30ml": {
+      "type": "number"
+    },
+    "price_50ml": {
+      "type": "number"
+    },
+    "price_100ml": {
+      "type": "number"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "image_url_2": {
+      "type": "string"
+    },
+    "stock": {
+      "type": "number",
+      "default": 100
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "bestseller": {
+      "type": "boolean",
+      "default": false
+    },
+    "new_arrival": {
+      "type": "boolean",
+      "default": false
+    },
+    "rating": {
+      "type": "number",
+      "default": 4.5
+    },
+    "review_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "name",
+    "slug",
+    "description",
+    "category",
+    "gender",
+    "fragrance_family",
+    "price_50ml",
+    "image_url"
+  ]
+}
